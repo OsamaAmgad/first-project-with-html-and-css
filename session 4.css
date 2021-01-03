@@ -1,0 +1,544 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2,span,a{
+font-family: sans-serif;
+}
+
+.container{
+    padding: 50px 200px ;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.about span{
+    color: lightgray;
+    font-size: 3rem;
+}
+
+.about h2{
+    color:black;
+    font-size: 2rem;
+}
+
+a,span{
+    display: inline-block;
+}
+
+
+#details{
+    position: relative;
+    width: calc(100% - 100px);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(linked/hero-bg.jpg);
+    background-position: center;
+}
+
+#details h2{
+    margin-top: 100px;
+    color: white;
+    font-size: 3rem;
+}
+
+#details h2 span{
+    
+    display: block;
+    color: green;
+}
+
+#details .downloader{
+    background-color: rgb(31,233,108);
+    border: none;
+    margin: 20px;
+    width: 150px;
+    height: 30px;
+    transition: .2s background-color;
+}
+
+#details .downloader a{
+    text-decoration: none;
+    color: white;
+    padding-left: 3px;
+    line-height: 30px;
+}
+
+#details .downloader:hover{
+    background-color: tomato;
+}
+
+.navbar{
+    border-left: 2px solid rgb(31,233,108);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #333;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo a{
+    background-color: rgb(31,233,108);
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+.navbar .navigation{
+    transform: translateY(-50px);
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar .navigation li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.navbar .navigation li a{
+    
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.5s background-color;
+}
+
+.navbar .navigation li:hover a{
+    background-color: rgb(31,233,108);
+    border: none;
+}
+
+.navbar .navigation li span{
+    position: absolute;
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    background-color: rgb(31,233,108);
+    padding: 5px 0;
+    opacity: 0;
+    color: #fff;
+    transition: 0.5s opacity;
+}
+
+.navbar .navigation li span::after{
+    position: absolute;
+    content: "";
+    right: -20px;
+    border-width: 10px;
+    top: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(31,233,108);
+}
+
+.navbar li{
+    overflow: hidden;
+}
+
+.navbar li:hover{
+    overflow: visible;
+}
+
+.navbar .navigation li:hover span{
+    opacity: 1;
+}
+
+.navbar .gotop{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(22, 212, 92);
+    padding: 20px 0;
+}
+
+.navbar .gotop button ,.navbar .gotop i{
+    color: #fff;
+    font-size: 30px;
+}
+
+#page-content .experience .icons{
+    margin-right: 30px;
+}
+
+#page-content .experience{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-content .experience ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: -5px;
+    background-color: #333;
+    height: 40px;
+}
+
+#page-content .experience ul li a{
+    background-color: rgb(31,233,108);
+    color: black;
+    transition: 0.5s border-radius;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#page-content .experience ul li:hover a{
+    border-radius: 50%;
+}
+
+#page-content .experience ul li{
+    position: relative;
+    list-style: none;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#page-content .experience .rest h3,
+#page-content .experience .rest h1{
+    margin-bottom: 20px;
+}
+
+#page-content .experience .rest h1 span{
+    color: rgb(31,233,108);
+}
+
+#page-content .experience .rest .ronaldo{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-content .experience .rest .messi{
+    width: 120px;
+    height: 70px;
+    text-align: left;
+    padding-left: 10px;
+    border-left: 3px solid rgb(31,233,108); 
+    border-bottom: 1px solid rgb(31,233,108); 
+    margin: 5px;
+}
+
+#page-content .experience .rest .messi h3{
+    color: rgb(31,233,108);
+}
+
+#service{
+    background-color:rgb(12,24,36);
+}
+
+#service .about h2{
+    color: white;
+}
+#service .experience p{
+    
+    color: white;
+}
+
+#service .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#service .info:hover{
+    transform: translateY(-10px);
+    transition: .5s all ease;
+}
+
+#service .info{
+    position: relative;
+    padding: 10px;
+    width: 30%;
+    background-color: darkslategrey;
+    margin: 15px 0;
+    transition: .2s transform;
+}
+
+#service .info a{
+    color: white;
+    margin: 5px;
+    font-size: 2rem;
+}
+
+#service .info h3{
+    color: rgb(31,233,108);
+    margin: 10px 0 ;
+    text-transform: uppercase;
+}
+
+#service .info p{
+    width: 70%;
+    color: white;
+}
+
+#portfolio .osama {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio .osama .pics{
+    background-color: #333;
+    width: 30%;
+    margin: 10px;
+    
+}
+
+#portfolio .osama .pics .infooo h1{
+    color: rgb(31,233,108);
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#portfolio .osama .pics .infooo h3{
+    color:white;
+    padding: 10px;
+    font-size:12px;
+    text-transform: uppercase;
+}
+
+#portfolio .osama .pics .image img{
+    width: 100%;
+    height: 300px;
+}
+
+#portfolio .experience p{
+    width: 50%;
+}
+
+#portfolio .experience .content{
+    padding: 10px;
+    text-align: center;
+}
+
+#portfolio .experience .content ul{
+    display: flex;
+    list-style: none;
+    justify-content: left;
+}
+
+#portfolio .experience .content ul li{
+    margin: 10px 0;
+    position: relative;
+}
+
+#portfolio .experience .content ul li a{
+    text-decoration: none;
+    width: auto;
+    padding: 20px;
+    color: #333;
+    transition-delay: .3s;
+}
+
+#portfolio .experience .content ul li a.all{
+    background-color: #333;
+    color: rgb(31,233,108);
+}
+
+#portfolio .experience .content ul li::after,#portfolio .experience .content ul li::before{
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: #333;
+    transition: all .5s;
+}
+
+#portfolio .experience .content ul li::after{
+    left: auto;
+    right: 0;
+}
+
+#portfolio .experience .content ul li:hover a{
+    color: #fff;
+}
+
+#portfolio .experience .content ul li:hover::after,#portfolio .experience .content ul li:hover::before{
+    width: 50%;
+}
+
+#test .experience p{
+    width: 50%;
+    margin: 20px 0;
+}
+
+#test .experience .content{
+    display: flex;
+}
+
+#test .experience .content .photo{
+    background-color: #333;
+    margin: 5px;
+    padding: 10px;
+}
+
+#test .experience .content .photo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 40%;
+}
+
+#test .experience .content .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+#test .experience .content .row h2{
+    color: white;
+    margin: 40px 0;
+}
+
+#test .experience .content .photo .description p{
+    color: white;
+    width: 100%;
+}
+
+#blog .experience p{
+    width: 50%;
+    margin: 20px 0;
+}
+
+#blog .experience .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog .experience .content .photo img{
+    width: 100%;
+    height: 100%;
+}
+
+#blog .experience .content .photo{
+    position: relative;
+    margin: 0 5px;
+    width: 30%;
+}
+
+.content{
+    overflow: hidden;
+}
+
+#blog .experience .content .photo .description p{
+    width: 100%;
+}
+
+#blog .experience .content .photo .description a{
+    color:white;
+    display: block;
+    margin-bottom: 7px;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+#blog .experience .content .photo .description .admin2{
+    color: rgb(31,233,108);
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+#blog .experience .content .photo .description .admin2:hover{
+    color: white;
+}
+
+#blog .experience .content .photo .description{
+    content: "";
+    position: absolute;
+    top: 90%;
+    background-color: #333;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: top ease-in-out .4s;
+    color: white;
+}
+
+
+#blog .experience .content .photo:hover .description .admin{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom:10px ;
+}
+
+#blog .experience .content .photo:hover .description {
+    top: 60%;
+}
+
+#contact .about h2{
+    color:white;
+    font-size: 3rem;
+}
+
+#contact{
+    background-color: rgb(51, 51, 51);
+}
+
+#contact .experience p{
+    width: 50%;
+    margin: 20px 0;
+    color:white;
+}
+
+#contact .experience .package{
+    display: flex;
+    
+}
+
+#contact .experience .package form{
+    width: 60%;
+}
+
+#contact .experience .package .maps{
+    width: 35%;
+}
+
+#contact .experience .package form input{
+    border: none;
+    padding: 10px;
+    background-color: rgb(51, 51, 51);
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(31,233,108);
+}
+
+#contact .experience .package form textarea{
+    border: none;
+    padding: 10px;
+    background-color: rgb(51, 51, 51);
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(31,233,108);
+}
+
+#contact .experience .package form .send{
+    background-color: rgb(31,233,108);
+    width: 250px;
+}
